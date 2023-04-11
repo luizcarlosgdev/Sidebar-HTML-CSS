@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial
+}
+
+.container {
+    z-index: 98;
+    height: 60px;
+    width: 100%;
+    background: #660096
+}
+
+input[type=checkbox]:checked ~ .container {
+    background: #222
+}
+
+
+#controlSide {
+    display: none
+}
+
+.lineSpinner {
+    z-index: 99;
+    position: absolute;
+    transition: all 0.3s;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    width: 22px;
+}
+
+.spinner {
+    background: #fff;
+    position: absolute;
+    cursor: pointer;
+    height: 2px;
+    box-sizing: border-box;
+}
+.line1 {
+    margin-top: 3px;
+    position: relative;
+    transition: all 0.3s;
+    
+}
+
+.line2 {
+    margin-top: 3px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.line3 {
+    margin-top: 3px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.sidemenu {
+    background: #660096;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+    transform: translateX(-310px);
+    transition: transform 250ms ease-in-out
+}
+
+input[type='checkbox']:checked ~ .sidemenu {
+    transform: translateX(0)
+}
+
+input[type='checkbox']:checked ~ .lineSpinner > .line1 {
+    transform: rotate(-135deg);
+    margin-top: 8px;
+}
+
+input[type='checkbox']:checked ~ .lineSpinner > .line3 {
+    transform: rotate(135deg);
+    margin-top: -7px;
+}
+
+input[type='checkbox']:checked ~ .lineSpinner > .line2 {
+    opacity: 0
+}
+
+.sidemenu ul {
+    margin: 0;
+    padding: 0
+}
+
+.sidemenu ul li {
+    list-style: none;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.infoContrato {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 10px 10px
+}
+
+.mainContainer {
+    display: flex;
+    margin-top: 50px;
+}
+
+.containerCard {
+    margin: auto;
+    width: 50%;
+}
+
+.cardContas {
+    margin-bottom: 10px;
+    background: #ddd;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.optionsUser {
+    margin: auto;
+    justify-content: left;
+    border: solid 1px #ddd
+}
+
+.containerOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+
+}
+
+.containerOptions button {
+    background: none;
+    border: none;
+    width: auto;
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 20px;
+}
+
+
